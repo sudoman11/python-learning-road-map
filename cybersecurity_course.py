@@ -122,6 +122,25 @@ class PythonCyberSecurityCourse:
         self.current_module = min(self.current_module + 1, 8)
         self.completed_modules.add(self.current_module)
 
+    def module_python_fundamentals(self):
+        print("\nModule 1: Python Fundamentals")
+        print("In this module, you will learn about basic Python syntax, data types, and control structures.")
+        print("Topics include:")
+        print("- Variables and Data Types")
+        print("- Control Structures (if, for, while)")
+        print("- Functions and Modules")
+        print("- Exception Handling")
+        input("\nPress Enter to complete this module...")
+
+    def module_networking(self):
+        print("\nModule 2: Network Programming & Analysis")
+        print("In this module, you will learn about network programming using Python.")
+        print("Topics include:")
+        print("- Sockets and Networking Basics")
+        print("- Creating a Simple Client-Server Application")
+        print("- Network Protocols")
+        input("\nPress Enter to complete this module...")
+
     # ----- Security Tools -----
     def security_tools(self):
         while True:
@@ -182,7 +201,48 @@ class PythonCyberSecurityCourse:
             print(f"Error: {e}")
         input("Press Enter to continue...")
 
-    # ... (Additional tool implementations would go here)
+    def tool_password_hasher(self):
+        print("\nPASSWORD HASHER")
+        password = input("Enter a password to hash: ").strip()
+        hashed_password = hashlib.sha256(password.encode()).hexdigest()
+        print(f"Hashed Password (SHA-256): {hashed_password}")
+        input("Press Enter to continue...")
+
+    def tool_crypto(self):
+        print("\nSIMPLE ENCRYPT/DECRYPT")
+        key = Fernet.generate_key()
+        cipher_suite = Fernet(key)
+        
+        plaintext = input("Enter text to encrypt: ").encode()
+        ciphertext = cipher_suite.encrypt(plaintext)
+        print(f"Encrypted: {ciphertext}")
+        
+        decrypted_text = cipher_suite.decrypt(ciphertext)
+        print(f"Decrypted: {decrypted_text.decode()}")
+        input("Press Enter to continue...")
+
+    def tool_web_request(self):
+        print("\nWEB REQUEST")
+        url = input("Enter URL to request: ").strip()
+        try:
+            response = requests.get(url)
+            print(f"Response Code: {response.status_code}")
+            print(f"Response Body: {response.text[:100]}...")  # Print first 100 characters
+        except Exception as e:
+            print(f"Error: {e}")
+        input("Press Enter to continue...")
+
+    def tool_packet_sniffer(self):
+        print("\nPACKET SNIFFER (BASIC)")
+        print("This feature is not implemented yet.")
+        input("Press Enter to continue...")
+
+    # ----- Progress Overview -----
+    def progress_overview(self):
+        self.clear_screen()
+        print("\nPROGRESS OVERVIEW:")
+        print(f"Completed Modules: {len(self.completed_modules)} out of 8")
+        input("Press Enter to continue...")
 
     # ----- System Functions -----
     def exit_program(self):
