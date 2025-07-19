@@ -1,0 +1,30 @@
+python-cybersecurity-course/
+├── module_1/
+│   ├── lesson_1_1/
+│   │   ├── examples/
+│   │   └── exercises/
+│   ├── lesson_1_2/
+│   │   ├── examples/
+│   │   └── exercises/
+│   └── lesson_1_3/
+│       ├── examples/
+│       └── exercises/
+│
+├── module_2/
+│   ├── lesson_2_1/
+│   ├── lesson_2_2/
+│   └── lesson_2_3/
+│
+├── module_3/
+│   ├── lesson_3_1/
+│   ├── lesson_3_2/
+│   └── lesson_3_3/
+│
+├── module_4/
+│   ├── lesson_4_1/
+│   ├── lesson_4_2/
+│   └── lesson_4_3/
+│
+└── module_5/
+    ├── project_guidelines/
+    └── project_examples/
